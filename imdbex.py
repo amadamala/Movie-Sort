@@ -7,7 +7,7 @@ from xgoogle.search import GoogleSearch, SearchError
 from xgoogle.googlesets import GoogleSets
 
 
-def get_imdb_url(movie_name):
+def get_rating(movie_name):
 	
 	try:
 	# Use xgoogle api to parse google. Following is the url to the api
@@ -19,8 +19,7 @@ def get_imdb_url(movie_name):
 		url = results[0].url.encode('utf8')
 		# url_title = results[0].title.encode('utf8')
 		# print url, url_title
-		return url
-	
+		imdb_rating(url)
 	except SearchError, e:
 		print "Search failed: %s" % e
 
@@ -44,11 +43,12 @@ def imdb_rating(url):
 		print
 
 def main():
-	url = get_imdb_url('Godfather')
-	imdb_rating(url)
+	#  read movies and generate ratings
+	f = open('movies.txt', 'r')
+	for line in f:
+		print line,
+		get_rating(line)
 	
-	# url = get_imdb_url('Scarface')
-	# imdb_rating(url)
 	# 
 	# url = get_imdb_url('Gladiator')
 	# imdb_rating(url)
