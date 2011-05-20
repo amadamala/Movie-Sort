@@ -1,3 +1,4 @@
+# Code to get movie rating from imdb and sort the list of movies.
 import imdb
 
 imdb = imdb.IMDb(accessSystem='http')
