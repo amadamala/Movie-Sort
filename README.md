@@ -11,4 +11,4 @@ Todo
 * movies.txt file as input
 * generate html table may be.
 * Take actor's name and generate his movie list in ratings order.
-
+* <strike> Generate suggested movies using google sets. </strike>
