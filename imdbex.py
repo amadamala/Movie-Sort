@@ -35,10 +35,8 @@ def imdb_rating(url):
 	#  print movie name and movie rating using imdbpy api
 	if movie_id != None:
 		im = imdb.IMDb(accessSystem='http')
-		movie = im.get_movie(movie_id)
-		title = movie['title']
-		year = movie['year']
-		rating = movie['rating']
+		m = im.get_movie(movie_id)
+		title, year, rating = m['title'], m['year'], m['rating']
 		print "Movie name:: %s (%d) \nRating:: %0.2f" %(title, year, rating)
 		print
 
@@ -48,11 +46,6 @@ def main():
 	for line in f:
 		print line,
 		get_rating(line)
-	
-	# 
-	# url = get_imdb_url('Gladiator')
-	# imdb_rating(url)
-
     
 	gs = GoogleSets(['Godfather', 'Scarface'])	
 	results = gs.get_results()
