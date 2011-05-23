@@ -9,7 +9,7 @@ Which takes list of movies as input and returns (movie name, rating) in their ra
 I used following api's to search imdb, and google.
 [IMDbPY](http://imdbpy.sourceforge.net/), [xgoogle](http://www.catonmat.net/blog/python-library-for-google-search/)
   
-If you have pip or setuptools installed, you can also use one of these commands to install imdbpy:  
+If you have pip or setuptools installed, you can also use one of these commands to install imdbpy:
   *  pip install imdbpy  
   *  easy_install imdbpy  
 
